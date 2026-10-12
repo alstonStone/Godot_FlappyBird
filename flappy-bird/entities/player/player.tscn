@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cqpgdh8djs3i3"]
+
+[ext_resource type="Script" uid="uid://cet7wfmj8kt15" path="res://entities/player/player.gd" id="1_abrql"]
+[ext_resource type="Texture2D" uid="uid://oi4e5d4sxj7g" path="res://entities/player/Bird1-1.png" id="1_symyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neqkb"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7pehq"]
+
+[node name="Player" type="CharacterBody2D" unique_id=117163500]
+script = ExtResource("1_abrql")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569981224]
+texture = SubResource("AtlasTexture_neqkb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1023101791]
+position = Vector2(0, 1)
+scale = Vector2(0.6990293, 0.30126595)
+shape = SubResource("CapsuleShape2D_7pehq")
